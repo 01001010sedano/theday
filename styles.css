@@ -7,16 +7,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensures content fits screen height */
+    min-height: 100vh;
 }
 
 /* Corkboard Container */
 .corkboard {
     position: relative;
-    width: 90vw; /* Adjust width based on screen size */
-    max-width: 800px; /* Limits size for larger screens */
+    width: 90vw; /* Responsive width */
+    max-width: 600px; /* Limits size for larger screens */
     height: auto;
-    aspect-ratio: 16 / 10; /* Maintains aspect ratio */
+    aspect-ratio: 16 / 10; /* Keeps ratio consistent */
     background: url('pictures/cork.jpeg') no-repeat center center;
     background-size: cover;
     border: 10px solid #d2b48c; /* Wooden frame effect */
@@ -29,15 +29,13 @@ body {
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 20vw; /* Responsive width */
-    max-width: 120px;
+    width: 100px; /* Fixed size for consistency */
     height: auto;
     padding: 10px;
     background: #fffb97;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     text-align: center;
     border-radius: 5px;
-    font-size: 0.8em;
 }
 
 /* Letter Paper */
@@ -45,7 +43,7 @@ body {
     position: absolute;
     top: 5%;
     right: 5%;
-    width: 40vw; /* Adjusts width for mobile screens */
+    width: 50%; /* Adjust width for mobile */
     max-width: 250px;
     padding: 10px;
     background: white;
@@ -53,7 +51,6 @@ body {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     transform: rotate(3deg);
     font-size: 0.8em;
-    z-index: 1;
 }
 
 /* Question */
@@ -62,7 +59,7 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5em; /* Smaller font for mobile */
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -93,12 +90,12 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Photos - Responsive Sizes */
+/* Photos */
 .photo {
     object-fit: cover;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
-    width: 22vw; /* Scale photos based on screen width */
+    width: 22vw; /* Responsive size */
     max-width: 120px;
     height: auto;
 }
@@ -139,16 +136,16 @@ button:hover {
     transform: rotate(-4deg);
 }
 
-/* Media Query for Small Screens (Phones) */
+/* Mobile-Friendly Adjustments */
 @media (max-width: 600px) {
     .corkboard {
-        width: 95vw;
+        width: 95vw; /* More space on phones */
         height: auto;
-        aspect-ratio: 16 / 12; /* Adjusted for phones */
+        aspect-ratio: 16 / 12; /* Adjust height ratio */
     }
 
     .question {
-        font-size: 1.2em; /* Smaller question text */
+        font-size: 1.2em;
     }
 
     .buttons {
@@ -162,14 +159,15 @@ button:hover {
     }
 
     .sticky-note {
-        width: 30vw;
+        width: 80px; /* Smaller size */
     }
 
     .letter-paper {
-        width: 50vw;
+        width: 70%; /* Adjust width to fit */
     }
 
     .photo {
         width: 25vw;
+        max-width: 100px;
     }
 }
