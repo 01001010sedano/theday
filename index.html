@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For My Love</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Be My Girlfriend?</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="container">
     <div class="corkboard">
-        <!-- Letter -->
-        <div class="letter-paper">
-            <p>Dear Love,</p>
-            <p>
-                I have so much fun with you, and you make my life better and bearable.
-                Thank you for always spending time with me and for always taking care
-                of me whenever I'm sick (which is always hehe). I love you so much!!
-            </p>
-        </div>
+      <!-- Letter -->
+      <div class="letter">
+        <p>Dear Love,</p>
+        <p>
+          I have so much fun with you, and you make my life better and bearable. 
+          Thank you for always spending time with me and for always taking care 
+          of me whenever I'm sick (which is always hehe). I love you so much!!
+        </p>
+      </div>
 
-        <!-- Photos -->
-        <img src="pictures/photo1.jpeg" alt="photo1" class="photo photo1" />
-        <img src="pictures/photo2.jpeg" alt="photo2" class="photo photo2" />
-        <img src="pictures/photo3.jpeg" alt="photo3" class="photo photo3" />
-        <img src="pictures/photo4.jpeg" alt="photo4" class="photo photo4" />
-        <img src="pictures/photo5.jpeg" alt="photo5" class="photo photo5" />
+      <!-- Photos -->
+      <div class="photos">
+        <img src="pictures/photo1.jpeg" class="photo" />
+        <img src="pictures/photo2.jpeg" class="photo" />
+        <img src="pictures/photo3.jpeg" class="photo" />
+        <img src="pictures/photo4.jpeg" class="photo" />
+        <img src="pictures/photo5.jpeg" class="photo" />
+      </div>
 
-        <!-- Sticky Note -->
-        <div class="sticky-note">
-            <p>🎶 Soft Spot - Play Me!</p>
-            <button id="playButton">Play</button>
-        </div>
+      <!-- Question -->
+      <h1 class="question">WILL YOU BE MY GIRLFRIEND?</h1>
+      <div class="buttons">
+        <button class="yes-btn">YES!</button>
+        <button class="yes-btn">Yes!</button>
+      </div>
 
-        <!-- Question -->
-        <div class="question">
-            <h2>WILL YOU BE MY GIRLFRIEND?</h2>
-        </div>
-
-        <!-- Buttons -->
-        <div class="buttons">
-            <button onclick="redirectToForm()">YES!</button>
-            <button onclick="redirectToForm()">Yes!</button>
-        </div>
+      <!-- Sticky Note -->
+      <div id="music-section" class="sticky-note">
+        <p>🎵 Soft Spot - Play Me!</p>
+        <button id="toggleMusic">Play</button>
+      </div>
     </div>
-
-    <script src="index.js"></script>
+  </div>
+  <script src="index.js"></script>
 </body>
 </html>

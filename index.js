@@ -1,20 +1,16 @@
-// Music Player
 const audio = new Audio('pictures/Soft spot.mp3');
-const playButton = document.getElementById('playButton');
+const toggleButton = document.getElementById('toggleMusic');
+
+// Toggle Play/Pause Button
 let isPlaying = false;
 
-playButton.addEventListener('click', () => {
-    if (isPlaying) {
-        audio.pause();
-        playButton.innerText = 'Play';
-    } else {
-        audio.play();
-        playButton.innerText = 'Pause';
-    }
-    isPlaying = !isPlaying;
+toggleButton.addEventListener('click', () => {
+  if (isPlaying) {
+    audio.pause();
+    toggleButton.innerText = 'Play';
+  } else {
+    audio.play();
+    toggleButton.innerText = 'Pause';
+  }
+  isPlaying = !isPlaying;
 });
-
-// Redirect to Google Form
-function redirectToForm() {
-    window.location.href = "https://forms.gle/ZnaM2t88P6WEzyEr9";
-}
