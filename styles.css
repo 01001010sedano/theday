@@ -1,0 +1,144 @@
+/* Full Page Background */
+body {
+    background: #ffd1dc; /* Soft pink background */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically */
+}
+
+/* Corkboard Container */
+.corkboard {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: url('pictures/cork.jpeg') no-repeat center center;
+    background-size: cover;
+    border: 10px solid #d2b48c; /* Wooden frame effect */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Depth effect */
+}
+
+/* Sticky Note */
+.sticky-note {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    background: #fffb97;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+/* Letter Paper */
+.letter-paper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(3deg);
+    font-size: 0.8em;
+    z-index: 1; /* Ensures the letter is on top */
+}
+
+/* Question */
+.question {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Buttons below the question */
+.buttons {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+button {
+    background-color: pink;
+    color: yellow;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* Photos - Larger Size for Fuller Board */
+.photo1 {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 120px; /* Larger size */
+    height: 150px; /* Larger size */
+    transform: rotate(-5deg);
+}
+
+.photo2 {
+    position: absolute;
+    top: 180px;
+    left: 30px;
+    width: 120px; /* Larger size */
+    height: 150px; /* Larger size */
+    transform: rotate(4deg);
+}
+
+.photo3 {
+    position: absolute;
+    bottom: 20px;
+    left: 80px;
+    width: 120px; /* Larger size */
+    height: 150px; /* Larger size */
+    transform: rotate(-2deg);
+}
+
+.photo4 {
+    position: absolute;
+    bottom: 50px;
+    right: 80px;
+    width: 120px; /* Larger size */
+    height: 150px; /* Larger size */
+    transform: rotate(5deg);
+}
+
+/* Photo 5 - Positioned at the top-right corner (away from letter) */
+.photo5 {
+    position: absolute;
+    top: 20px;
+    right: 250px; /* Moved farther to the left */
+    width: 120px; /* Larger size */
+    height: 150px; /* Larger size */
+    transform: rotate(-4deg);
+    z-index: 0; /* Behind the letter */
+}
+
+/* Photo Style */
+.photo {
+    object-fit: cover;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
