@@ -1,6 +1,6 @@
-/* Full Page Background */
+/* General Styles */
 body {
-    background: #ffd1dc; /* Soft pink background */
+    background: #ffd1dc; /* Soft pink */
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -10,32 +10,16 @@ body {
     min-height: 100vh;
 }
 
-/* Corkboard Container */
+/* Corkboard */
 .corkboard {
     position: relative;
-    width: 90vw; /* Responsive width */
-    max-width: 600px; /* Limits size for larger screens */
-    height: auto;
-    aspect-ratio: 16 / 10; /* Keeps ratio consistent */
+    width: 90vw;
+    max-width: 400px; /* Portrait-friendly */
+    height: 85vh;
     background: url('pictures/cork.jpeg') no-repeat center center;
     background-size: cover;
-    border: 10px solid #d2b48c; /* Wooden frame effect */
+    border: 10px solid #d2b48c;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Sticky Note */
-.sticky-note {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px; /* Fixed size for consistency */
-    height: auto;
-    padding: 10px;
-    background: #fffb97;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    border-radius: 5px;
 }
 
 /* Letter Paper */
@@ -43,30 +27,59 @@ body {
     position: absolute;
     top: 5%;
     right: 5%;
-    width: 50%; /* Adjust width for mobile */
-    max-width: 250px;
+    width: 75%;
     padding: 10px;
     background: white;
     border: 1px solid #ccc;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    transform: rotate(3deg);
+    transform: rotate(2deg);
     font-size: 0.8em;
 }
+
+/* Sticky Note */
+.sticky-note {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 150px;
+    padding: 10px;
+    background: #fffb97;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Photos */
+.photo {
+    position: absolute;
+    object-fit: cover;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: 70px;
+    height: 70px;
+}
+
+/* Photo Positions - Avoid Overlaps */
+.photo1 { top: 10%; left: 5%; transform: rotate(-5deg); }
+.photo2 { top: 20%; left: 20%; transform: rotate(5deg); }
+.photo3 { top: 50%; right: 10%; transform: rotate(-2deg); }
+.photo4 { bottom: 25%; left: 15%; transform: rotate(4deg); }
+.photo5 { bottom: 5%; right: 10%; transform: rotate(-6deg); }
 
 /* Question */
 .question {
     position: absolute;
-    top: 40%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5em;
     text-align: center;
+    font-size: 1.2em;
 }
 
 /* Buttons */
 .buttons {
     position: absolute;
-    top: 55%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, 0%);
     display: flex;
@@ -90,84 +103,22 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Photos */
-.photo {
-    object-fit: cover;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    width: 22vw; /* Responsive size */
-    max-width: 120px;
-    height: auto;
-}
-
-/* Individual Photo Positions */
-.photo1 {
-    position: absolute;
-    top: 10%;
-    left: 5%;
-    transform: rotate(-5deg);
-}
-
-.photo2 {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    transform: rotate(4deg);
-}
-
-.photo3 {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    transform: rotate(-2deg);
-}
-
-.photo4 {
-    position: absolute;
-    bottom: 15%;
-    right: 10%;
-    transform: rotate(5deg);
-}
-
-.photo5 {
-    position: absolute;
-    top: 5%;
-    right: 25%;
-    transform: rotate(-4deg);
-}
-
-/* Mobile-Friendly Adjustments */
+/* Mobile Responsive Adjustments */
 @media (max-width: 600px) {
     .corkboard {
-        width: 95vw; /* More space on phones */
-        height: auto;
-        aspect-ratio: 16 / 12; /* Adjust height ratio */
-    }
-
-    .question {
-        font-size: 1.2em;
-    }
-
-    .buttons {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center;
-    }
-
-    button {
-        font-size: 0.9em;
-        padding: 6px 12px;
-    }
-
-    .sticky-note {
-        width: 80px; /* Smaller size */
-    }
-
-    .letter-paper {
-        width: 70%; /* Adjust width to fit */
+        height: 90vh;
     }
 
     .photo {
-        width: 25vw;
-        max-width: 100px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .question {
+        font-size: 1em;
+    }
+
+    .buttons {
+        flex-direction: column;
     }
 }
