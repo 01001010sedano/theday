@@ -30,7 +30,7 @@ body {
 .letter {
   background: white;
   padding: 10px;
-  width: 230px;
+  width: 250px;
   border: 1px solid #ddd;
   transform: rotate(-3deg);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -51,22 +51,22 @@ body {
 
 /* Individual Photo Positions */
 .photo1 {
-  top: 50px;
+  top: 150px;
   left: 20px;
 }
 
 .photo2 {
-  top: 50px;
+  top: 150px;
   left: 90px;
 }
 
 .photo3 {
-  top: 120px;
+  top: 230px;
   left: 20px;
 }
 
 .photo4 {
-  top: 120px;
+  top: 230px;
   left: 90px;
 }
 
@@ -81,7 +81,7 @@ body {
   font-size: 16px;
   font-weight: bold;
   position: absolute;
-  top: 200px;
+  top: 310px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -90,7 +90,7 @@ body {
 .buttons {
   text-align: center;
   position: absolute;
-  top: 260px;
+  top: 350px;
   left: 50%;
   transform: translateX(-50%);
 }
