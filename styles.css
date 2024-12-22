@@ -30,7 +30,7 @@ body {
 .letter {
   background: white;
   padding: 8px;
-  width: 230px; /* Smaller size */
+  width: 200px; /* Smaller size */
   border: 1px solid #ddd;
   transform: rotate(8deg);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -69,7 +69,7 @@ body {
 }
 
 .photo4 {
-  top: 220px;
+  top: 230px;
   right: 10px;
   transform: rotate(10deg);
 }
@@ -83,7 +83,7 @@ body {
 /* Question */
 .question {
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   position: absolute;
   top: 280px;
@@ -95,7 +95,7 @@ body {
 .buttons {
   text-align: center;
   position: absolute;
-  top: 320px;
+  top: 335px;
   left: 50%;
   transform: translateX(-50%);
 }
